@@ -3,6 +3,15 @@
 
 <img width="443" alt="Screen Shot 2020-06-29 at 22 29 05" src="https://user-images.githubusercontent.com/1725068/86011789-1d51a600-ba58-11ea-910a-acb82d14d2b3.png">
 
+#### セットアップ
+
+``create_sample_data``メソッドを実行します。データの範囲は``23``-``24``行で調整することができます。
+
+```
+$sd:=!2019-12-31!
+$ed:=!2020-12-31!
+```
+
 ```
 C_OBJECT($es)
 
