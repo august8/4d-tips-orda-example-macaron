@@ -14,7 +14,7 @@ Case of
 	: (False)
 		$formula:=Formula(Month of(This.日付)=1)
 		$es:=$売上情報.営業日.query($formula).売上  //1月の売上（フォーミュラでクエリ）
-	: (True)
+	: (False)
 		$es:=$売上情報.営業日.query("日付 >= :1 and 日付 <= :2";!2020-01-01!;!2020-01-31!).売上  //1月の売上
 End case 
 
