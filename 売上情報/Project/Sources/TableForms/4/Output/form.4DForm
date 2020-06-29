@@ -1,0 +1,288 @@
+﻿{
+	"destination": "listScreen",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"markerHeader": 19,
+	"markerBody": 92,
+	"markerBreak": 92,
+	"markerFooter": 92,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"ピクチャー6": {
+					"type": "picture",
+					"top": -5,
+					"left": 0,
+					"width": 586,
+					"height": 24,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "Images/ピクチャー6.png"
+				},
+				"S1_テキスト": {
+					"type": "text",
+					"top": 0,
+					"left": 24,
+					"width": 64,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "ID : "
+				},
+				"S2_テキスト": {
+					"type": "text",
+					"top": 0,
+					"left": 120,
+					"width": 280,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "名称 : "
+				},
+				"S3_テキスト": {
+					"type": "text",
+					"top": 0,
+					"left": 432,
+					"width": 56,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "製造数 : "
+				},
+				"S5_テキスト": {
+					"type": "text",
+					"top": 0,
+					"left": 517,
+					"width": 65,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "アイコン : "
+				},
+				"四角形7": {
+					"type": "rectangle",
+					"top": 19,
+					"left": 0,
+					"width": 586,
+					"height": 73,
+					"sizingX": "grow",
+					"stroke": "transparent"
+				},
+				"S1_フィールド": {
+					"type": "input",
+					"top": 23,
+					"left": 24,
+					"width": 64,
+					"height": 17,
+					"sizingX": "grow",
+					"dataSource": "[洋菓子:4]ID:1",
+					"dataSourceTypeHint": "integer",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S2_フィールド": {
+					"type": "input",
+					"top": 23,
+					"left": 120,
+					"width": 280,
+					"height": 17,
+					"sizingX": "grow",
+					"dataSource": "[洋菓子:4]名称:2",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_フィールド": {
+					"type": "input",
+					"top": 23,
+					"left": 432,
+					"width": 56,
+					"height": 17,
+					"sizingX": "grow",
+					"dataSource": "[洋菓子:4]製造数:3",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S5_フィールド": {
+					"type": "input",
+					"top": 23,
+					"left": 517,
+					"width": 48,
+					"height": 48,
+					"sizingX": "grow",
+					"dataSource": "[洋菓子:4]アイコン:5",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none"
+				},
+				"線8": {
+					"type": "line",
+					"top": -5,
+					"left": 0,
+					"height": 97,
+					"stroke": "#A8A8A8"
+				},
+				"線9": {
+					"type": "line",
+					"top": -5,
+					"left": 586,
+					"height": 97,
+					"sizingX": "move",
+					"stroke": "#A8A8A8"
+				},
+				"線10": {
+					"type": "line",
+					"top": -5,
+					"left": 586,
+					"height": 97,
+					"stroke": "#A8A8A8"
+				},
+				"スプリッター2": {
+					"type": "button",
+					"top": -5,
+					"left": 585,
+					"width": 3,
+					"height": 97,
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"線11": {
+					"type": "line",
+					"top": -5,
+					"left": 504,
+					"height": 97,
+					"stroke": "#A8A8A8"
+				},
+				"スプリッター3": {
+					"type": "button",
+					"top": -5,
+					"left": 503,
+					"width": 3,
+					"height": 97,
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"線12": {
+					"type": "line",
+					"top": -5,
+					"left": 416,
+					"height": 97,
+					"stroke": "#A8A8A8"
+				},
+				"スプリッター4": {
+					"type": "button",
+					"top": -5,
+					"left": 415,
+					"width": 3,
+					"height": 97,
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"線13": {
+					"type": "line",
+					"top": -5,
+					"left": 104,
+					"height": 97,
+					"stroke": "#A8A8A8"
+				},
+				"スプリッター5": {
+					"type": "button",
+					"top": -5,
+					"left": 103,
+					"width": 3,
+					"height": 97,
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

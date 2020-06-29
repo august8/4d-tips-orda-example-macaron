@@ -1,0 +1,758 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 25,
+	"bottomMargin": 25,
+	"markerBody": 582,
+	"markerBreak": 582,
+	"markerFooter": 592,
+	"events": [
+		"onLoad",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"残数": {
+					"type": "input",
+					"top": 140,
+					"left": 548,
+					"width": 369,
+					"height": 257,
+					"visibility": "hidden",
+					"dataSource": "[売上:5]明細:4.残数",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"終了": {
+					"type": "input",
+					"top": 440,
+					"left": 548,
+					"width": 369,
+					"height": 257,
+					"visibility": "hidden",
+					"dataSource": "[営業日:6]統計:3.終了",
+					"dataSourceTypeHint": "collection",
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"bFirst": {
+					"type": "pictureButton",
+					"top": 15,
+					"left": 10,
+					"width": 48,
+					"height": 48,
+					"action": "firstRecord",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/Buttons/LightGrey/FirstRecord.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "pictureButton",
+					"top": 15,
+					"left": 60,
+					"width": 48,
+					"height": 48,
+					"action": "previousRecord",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/Buttons/LightGrey/PreviousRecord.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "pictureButton",
+					"top": 16,
+					"left": 580,
+					"width": 48,
+					"height": 48,
+					"action": "nextRecord",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/Buttons/LightGrey/NextRecord.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"bLast": {
+					"type": "pictureButton",
+					"top": 16,
+					"left": 630,
+					"width": 48,
+					"height": 48,
+					"action": "lastRecord",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/Buttons/LightGrey/LastRecord.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"top": 120,
+					"left": 19,
+					"width": 509,
+					"height": 308,
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"rowHeight": "48px",
+					"dataSource": "[売上:5]明細:4.行",
+					"selectionMode": "none",
+					"scrollbarHorizontal": "automatic",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"events": [
+						"onClick",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column8",
+							"dataSource": "This:C1470.商品名",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"truncateMode": "none",
+							"verticalAlign": "middle",
+							"fontFamily": ".SF NS Text",
+							"fontSize": 18,
+							"header": {
+								"name": "Header1"
+							},
+							"footer": {
+								"name": "Scrool Bar1",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column9",
+							"dataSource": "This:C1470.個数",
+							"dataSourceTypeHint": "number",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"truncateMode": "none",
+							"verticalAlign": "middle",
+							"fontFamily": ".SF NS Text",
+							"fontSize": 18,
+							"header": {
+								"name": "Header2",
+								"text": "個数"
+							},
+							"footer": {
+								"name": "Scrool Bar2",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column10",
+							"dataSource": "This:C1470.単価",
+							"dataSourceTypeHint": "number",
+							"width": 60,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"truncateMode": "none",
+							"verticalAlign": "middle",
+							"fontFamily": ".SF NS Text",
+							"fontSize": 18,
+							"header": {
+								"name": "Header3",
+								"text": "単価"
+							},
+							"footer": {
+								"name": "Scrool Bar3",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column11",
+							"dataSource": "This:C1470.金額",
+							"dataSourceTypeHint": "number",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"truncateMode": "none",
+							"verticalAlign": "middle",
+							"fontFamily": ".SF NS Text",
+							"fontSize": 18,
+							"header": {
+								"name": "Header4",
+								"text": "金額"
+							},
+							"footer": {
+								"name": "Scrool Bar4",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column12",
+							"dataSource": "ds:C1482.洋菓子.get(This:C1470.商品ID).画像",
+							"dataSourceTypeHint": "picture",
+							"width": 104,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"pictureFormat": "proportionalCenter",
+							"header": {
+								"name": "Header5"
+							},
+							"footer": {
+								"name": "Scrool Bar5",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"Ruler": {
+					"type": "ruler",
+					"top": 27,
+					"left": 108,
+					"width": 473,
+					"height": 26,
+					"max": 100,
+					"graduationStep": 1,
+					"method": "ObjectMethods/Ruler.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"focusable": false
+				},
+				"残数リストボックス": {
+					"type": "listbox",
+					"top": 140,
+					"left": 548,
+					"width": 369,
+					"height": 257,
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"sortable": false,
+					"movableRows": false,
+					"dataSource": "[売上:5]明細:4.残数",
+					"selectionMode": "none",
+					"scrollbarHorizontal": "automatic",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"columns": [
+						{
+							"name": "Column5",
+							"dataSource": "ds:C1482.洋菓子.get(This:C1470.商品ID).アイコン",
+							"dataSourceTypeHint": "picture",
+							"width": 24,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"pictureFormat": "proportionalCenter",
+							"header": {
+								"name": "Header10"
+							},
+							"footer": {
+								"name": "Scrool Bar10",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column6",
+							"dataSource": "This:C1470.商品名",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"truncateMode": "none",
+							"verticalAlign": "middle",
+							"header": {
+								"name": "Header6"
+							},
+							"footer": {
+								"name": "Scrool Bar6",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column1",
+							"dataSource": "(This:C1470.個数/This:C1470.製造数)*100",
+							"dataSourceTypeHint": "number",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"numberFormat": "##0.0%",
+							"textAlign": "right",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "在庫"
+							},
+							"footer": {
+								"name": "Scrool Bar8",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column7",
+							"dataSource": "This:C1470.個数",
+							"dataSourceTypeHint": "number",
+							"width": 170,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"truncateMode": "none",
+							"verticalAlign": "middle",
+							"header": {
+								"name": "Header7",
+								"text": "残数"
+							},
+							"footer": {
+								"name": "Scrool Bar7",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"終了リストボックス": {
+					"type": "listbox",
+					"top": 440,
+					"left": 548,
+					"width": 369,
+					"height": 257,
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"movableRows": false,
+					"dataSource": "[営業日:6]統計:3.終了",
+					"selectionMode": "none",
+					"scrollbarHorizontal": "automatic",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"columns": [
+						{
+							"name": "Column3",
+							"dataSource": "ds:C1482.洋菓子.get(This:C1470.商品ID).アイコン",
+							"dataSourceTypeHint": "picture",
+							"width": 24,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"pictureFormat": "proportionalCenter",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9"
+							},
+							"footer": {
+								"name": "Scrool Bar11",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "This:C1470.商品名",
+							"width": 110,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"pictureFormat": "truncatedCenter",
+							"truncateMode": "none",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11"
+							},
+							"footer": {
+								"name": "Scrool Bar9",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column13",
+							"dataSource": "This:C1470.製造数",
+							"dataSourceTypeHint": "number",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header13",
+								"text": "製造数"
+							},
+							"footer": {
+								"name": "Scrool Bar13",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "Time:C179(This:C1470.終了時刻)",
+							"dataSourceTypeHint": "number",
+							"width": 170,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"numberFormat": "##0.0%",
+							"timeFormat": "hh_mm",
+							"truncateMode": "none",
+							"textAlign": "right",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "最終"
+							},
+							"footer": {
+								"name": "Scrool Bar12",
+								"timeFormat": "hh_mm_ss"
+							}
+						}
+					]
+				},
+				"終了.list": {
+					"type": "radio",
+					"top": 414,
+					"left": 548,
+					"width": 75,
+					"height": 21,
+					"text": "リスト",
+					"focusable": false,
+					"radioGroup": "グループ2",
+					"method": "ObjectMethods/終了.list.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"終了.detail": {
+					"type": "radio",
+					"top": 414,
+					"left": 628,
+					"width": 75,
+					"height": 21,
+					"text": "詳細",
+					"focusable": false,
+					"radioGroup": "グループ2",
+					"method": "ObjectMethods/終了.detail.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"残数.list": {
+					"type": "radio",
+					"top": 114,
+					"left": 548,
+					"width": 75,
+					"height": 21,
+					"text": "リスト",
+					"focusable": false,
+					"radioGroup": "グループ1",
+					"method": "ObjectMethods/残数.list.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"残数.detail": {
+					"type": "radio",
+					"top": 114,
+					"left": 628,
+					"width": 75,
+					"height": 21,
+					"text": "詳細",
+					"focusable": false,
+					"radioGroup": "グループ1",
+					"method": "ObjectMethods/残数.detail.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"統計.detail": {
+					"type": "input",
+					"top": 472,
+					"left": 20,
+					"width": 508,
+					"height": 225,
+					"dataSource": "[営業日:6]統計:3",
+					"dataSourceTypeHint": "object",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"bCancel": {
+					"type": "pictureButton",
+					"top": 16,
+					"left": 681,
+					"width": 48,
+					"height": 48,
+					"action": "cancel",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/Buttons/LightGrey/Cancel.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "pictureButton",
+					"top": 16,
+					"left": 731,
+					"width": 48,
+					"height": 48,
+					"action": "accept",
+					"rowCount": 4,
+					"picture": "/RESOURCES/Images/Buttons/LightGrey/Validate.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"フィールド2": {
+					"type": "input",
+					"top": 88,
+					"left": 20,
+					"width": 100,
+					"height": 17,
+					"dataSource": "[売上:5]番号:2",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"フィールド3": {
+					"type": "input",
+					"top": 88,
+					"left": 130,
+					"width": 100,
+					"height": 17,
+					"dataSource": "[営業日:6]日付:2",
+					"dataSourceTypeHint": "date",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"フィールド4": {
+					"type": "input",
+					"top": 88,
+					"left": 240,
+					"width": 100,
+					"height": 17,
+					"dataSource": "[売上:5]時刻:3",
+					"dataSourceTypeHint": "time",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"統計.field1": {
+					"type": "input",
+					"top": 472,
+					"left": 80,
+					"width": 80,
+					"height": 17,
+					"dataSource": "[営業日:6]統計:3.合計",
+					"dataSourceTypeHint": "number",
+					"textAlign": "right",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"統計.label1": {
+					"type": "text",
+					"top": 473,
+					"left": 30,
+					"width": 35,
+					"height": 17,
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "合計"
+				},
+				"統計.field2": {
+					"type": "input",
+					"top": 502,
+					"left": 80,
+					"width": 80,
+					"height": 17,
+					"dataSource": "[営業日:6]統計:3.半額",
+					"dataSourceTypeHint": "number",
+					"textAlign": "right",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"統計.label2": {
+					"type": "text",
+					"top": 503,
+					"left": 30,
+					"width": 35,
+					"height": 17,
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "半額"
+				},
+				"統計.field3": {
+					"type": "input",
+					"top": 532,
+					"left": 80,
+					"width": 80,
+					"height": 17,
+					"dataSource": "[営業日:6]統計:3.値引",
+					"dataSourceTypeHint": "number",
+					"textAlign": "right",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"統計.label3": {
+					"type": "text",
+					"top": 533,
+					"left": 30,
+					"width": 35,
+					"height": 17,
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"text": "値引"
+				},
+				"時刻": {
+					"type": "input",
+					"top": 16,
+					"left": 798,
+					"width": 119,
+					"height": 113,
+					"dataSource": "clock ([売上:5]時刻:3)",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none"
+				},
+				"統計.simple": {
+					"type": "radio",
+					"top": 440,
+					"left": 20,
+					"width": 75,
+					"height": 21,
+					"text": "基本",
+					"focusable": false,
+					"radioGroup": "グループ3",
+					"method": "ObjectMethods/統計.simple.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"終了.full": {
+					"type": "radio",
+					"top": 440,
+					"left": 100,
+					"width": 75,
+					"height": 21,
+					"text": "詳細",
+					"focusable": false,
+					"radioGroup": "グループ3",
+					"method": "ObjectMethods/終了.full.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			},
+			"entryOrder": [
+				"List Box",
+				"Ruler",
+				"残数リストボックス",
+				"終了リストボックス",
+				"グループ2",
+				"終了.list",
+				"終了.detail",
+				"グループ1",
+				"残数.list",
+				"残数.detail",
+				"統計.field1",
+				"統計.field2",
+				"統計.field3",
+				"グループ3",
+				"統計.simple",
+				"終了.full"
+			]
+		}
+	],
+	"editor": {
+		"groups": {
+			"グループ3": [
+				"統計.simple",
+				"終了.full"
+			],
+			"グループ1": [
+				"残数.list",
+				"残数.detail"
+			],
+			"グループ2": [
+				"終了.list",
+				"終了.detail"
+			]
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

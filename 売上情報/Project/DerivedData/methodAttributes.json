@@ -1,0 +1,33 @@
+﻿{
+	"methods": {
+		"create_sample_data": {
+			"timeStamp": "2020-06-29T10:13:20.159Z",
+			"attributes": {
+				"invisible": true
+			}
+		},
+		"get_stats": {
+			"timeStamp": "2020-06-29T02:42:51.000Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"TEST": {
+			"timeStamp": "2020-06-29T13:31:27.313Z"
+		},
+		"clock": {
+			"timeStamp": "2020-06-29T02:42:51.000Z",
+			"attributes": {
+				"invisible": true
+			}
+		},
+		"get_lines": {
+			"timeStamp": "2020-06-29T02:42:51.000Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		}
+	}
+}

@@ -1,0 +1,113 @@
+﻿{
+	"destination": "listScreen",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 26,
+	"markerBody": 50,
+	"markerBreak": 50,
+	"markerFooter": 50,
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"四角形4": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 375,
+					"height": 50,
+					"sizingX": "grow",
+					"stroke": "transparent"
+				},
+				"ピクチャー3": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 375,
+					"height": 26,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "Images/ピクチャー3.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"S1_テキスト": {
+					"type": "text",
+					"top": 7,
+					"left": 15,
+					"width": 64,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "ID : "
+				},
+				"S2_テキスト": {
+					"type": "text",
+					"top": 7,
+					"left": 91,
+					"width": 280,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "number : "
+				},
+				"S1_フィールド": {
+					"type": "input",
+					"top": 30,
+					"left": 15,
+					"width": 64,
+					"height": 17,
+					"sizingX": "grow",
+					"dataSource": "[伝票:2]ID:1",
+					"dataSourceTypeHint": "integer",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"S2_フィールド": {
+					"type": "input",
+					"top": 30,
+					"left": 91,
+					"width": 280,
+					"height": 17,
+					"sizingX": "grow",
+					"dataSource": "[伝票:2]番号:2",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"線5": {
+					"type": "line",
+					"top": 0,
+					"left": 85,
+					"height": 50,
+					"stroke": "#A8A8A8"
+				},
+				"スプリッター2": {
+					"type": "button",
+					"top": 0,
+					"left": 84,
+					"width": 3,
+					"height": 53,
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

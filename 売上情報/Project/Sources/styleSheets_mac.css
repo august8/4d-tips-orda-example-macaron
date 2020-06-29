@@ -1,0 +1,16 @@
+.default {
+	font-family: Lucida Grande;
+	font-size: 13px;
+}
+
+.list {
+	font-family: "システムフォント";
+	font-size: 21px;
+}
+
+.title {
+	font-family: "システムフォント";
+	font-size: 24px;
+	font-weight: bold;
+}
+

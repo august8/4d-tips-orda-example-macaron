@@ -1,0 +1,9 @@
+﻿{
+	"Trigger": {
+		"methods": [
+			"get_lines",
+			"get_stats"
+		]
+	},
+	"trash": {}
+}

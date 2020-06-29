@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="" uuid="43C8B6AF25FE4707AD14ED471FBAD00C" collation_locale="ja">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="洋菓子" uuid="BE2C4E3721E844C892091758E43707AE" id="4">
+		<field name="ID" uuid="0CDA1396BF794E66B23DE2CAFDB81740" type="4" unique="true" autosequence="true" never_null="true" id="1"/>
+		<field name="名称" uuid="91CA17D137954C13A6C41888DC635686" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="製造数" uuid="93EE0543D70F42C7BE212723DB471E39" type="3" never_null="true" id="3"/>
+		<field name="画像" uuid="996AD07847B84EED96A96C1221037C27" type="12" blob_switch_size="2147483647" never_null="true" id="4"/>
+		<field name="アイコン" uuid="3037434D56ED4976B5379E84D0B77D6F" type="12" never_null="true" id="5"/>
+		<primary_key field_name="ID" field_uuid="0CDA1396BF794E66B23DE2CAFDB81740"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="5">
+				<color red="150" green="216" blue="175" alpha="255"/>
+				<coordinates left="307.77084350586" top="0" width="102" height="146.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="売上" uuid="9BDA9A26E97448EFBED49BB782A0CAB1" id="5">
+		<field name="ID" uuid="6CACE136E4BA42279BD700EE5487C3B9" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="番号" uuid="1576DB7B0F464AFB9C71EEFF00FF0E67" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="時刻" uuid="03E0A774E9C74A7BB0266BAFA3C61657" type="9" never_null="true" id="3"/>
+		<field name="明細" uuid="D8D05C59A8954BFB8BAFCC687750F5CE" type="21" blob_switch_size="2147483647" never_null="true" id="4"/>
+		<field name="日付" uuid="9567D59170ED4DEF91D4C39458A69EB2" type="4" never_null="true" id="5"/>
+		<primary_key field_name="ID" field_uuid="6CACE136E4BA42279BD700EE5487C3B9"/>
+		<table_extra trigger_insert="true" trigger_update="true" trigger_delete="true" input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="5">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="157.1796875" top="0" width="80" height="161.30078125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="営業日" uuid="AA2C4C9E6ACE4D9A9266E7D99AA6127A" id="6">
+		<field name="ID" uuid="5FD8F575EB384429A1775BE510015B49" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="日付" uuid="026883C847B94B73A3DECA5D932B9CE3" type="8" never_null="true" id="2"/>
+		<field name="統計" uuid="1B4AEC95F85348E5B0E82411ABEF7271" type="21" blob_switch_size="2147483647" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="5FD8F575EB384429A1775BE510015B49"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="3">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="0" top="0" width="80" height="104.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="675EE71EBD1D4887A6B69FB3312C0F3D" name_Nto1="営業日" name_1toN="売上" auto_load_Nto1="true" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="9567D59170ED4DEF91D4C39458A69EB2" name="日付">
+				<table_ref uuid="9BDA9A26E97448EFBED49BB782A0CAB1" name="売上"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5FD8F575EB384429A1775BE510015B49" name="ID">
+				<table_ref uuid="AA2C4C9E6ACE4D9A9266E7D99AA6127A" name="営業日"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" uuid="27379D748F5140B28210CAB8704E2320" type="3">
+		<field_ref uuid="9567D59170ED4DEF91D4C39458A69EB2" name="日付">
+			<table_ref uuid="9BDA9A26E97448EFBED49BB782A0CAB1" name="売上"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="49C512620F84402296498CE6F68D09E3" type="7">
+		<field_ref uuid="5FD8F575EB384429A1775BE510015B49" name="ID">
+			<table_ref uuid="AA2C4C9E6ACE4D9A9266E7D99AA6127A" name="営業日"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="8A86180F891E4403960F57BF4B9C4FFD" type="3">
+		<field_ref uuid="026883C847B94B73A3DECA5D932B9CE3" name="日付">
+			<table_ref uuid="AA2C4C9E6ACE4D9A9266E7D99AA6127A" name="営業日"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A0BE7C85FE2245DDA07870DF3DF01DF2" type="1">
+		<field_ref uuid="0CDA1396BF794E66B23DE2CAFDB81740" name="ID">
+			<table_ref uuid="BE2C4E3721E844C892091758E43707AE" name="洋菓子"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F616FBBE79DD43A29E563A1DB06103A4" type="3">
+		<field_ref uuid="D8D05C59A8954BFB8BAFCC687750F5CE" name="明細">
+			<table_ref uuid="9BDA9A26E97448EFBED49BB782A0CAB1" name="売上"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="FF6910470C184126B199ACC698E210AF" type="1">
+		<field_ref uuid="6CACE136E4BA42279BD700EE5487C3B9" name="ID">
+			<table_ref uuid="9BDA9A26E97448EFBED49BB782A0CAB1" name="売上"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:63.1.0" __keywordBuildingHash="mecab:0.996;sys.dic:102;" package_name="world-tour-19" structure_file_name="world-tour-19" data_file_path=":world-tour-19.4DD">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>

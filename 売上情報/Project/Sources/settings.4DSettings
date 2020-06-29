@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="12">
+	<com.4d>
+		<deployment>
+			<options/>
+		</deployment>
+		<database>
+			<cache adaptative="false" flush_buffer_delay="20s"/>
+		</database>
+		<php ip_address="127.0.0.1"/>
+		<sql>
+			<publication port_number="19812"/>
+		</sql>
+		<web>
+			<standalone_server>
+				<configuration allowHttp="false" https_port_number="9000" port_number="8000"/>
+				<rest launch_at_startup="true"/>
+			</standalone_server>
+		</web>
+		<server>
+			<network>
+				<options publication_name="world-tour-19"/>
+				<client_server use_encryption="false"/>
+			</network>
+		</server>
+	</com.4d>
+</preferences>
