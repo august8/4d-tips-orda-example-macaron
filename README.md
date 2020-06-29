@@ -1,7 +1,7 @@
 # 4d-tips-orda-example-macaron
 簡単なORDAの例題です。
 
-
+<img width="443" alt="Screen Shot 2020-06-29 at 22 29 05" src="https://user-images.githubusercontent.com/1725068/86011789-1d51a600-ba58-11ea-910a-acb82d14d2b3.png">
 
 ```4d
 C_OBJECT($es)
