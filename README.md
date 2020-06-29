@@ -22,7 +22,7 @@ $売上情報:=ds
 Case of 
 : (True)
 	$es:=$売上情報.営業日.query("eval(Month of(This.日付)=1)").売上  //1月の売上（evalでクエリ）
-	: (False)
+: (False)
 $formula:=Formula(Month of(This.日付)=1)
 	$es:=$売上情報.営業日.query($formula).売上  //1月の売上（フォーミュラでクエリ）
 : (False)
